@@ -5,7 +5,6 @@ from os import path
 from StockDataApi import StockDataApi
 from StockDataFetcher import StockDataFetcher
 
-
 class StockData:
 
     def __init__(self, ticker):

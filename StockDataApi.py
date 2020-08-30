@@ -1,16 +1,5 @@
 import requests
 
-# RSI
-# Past 14 days of open/close/%
-# Past 3 days on the 5 minute chart?
-# Volume?
-
-
-# Steps
-# Generate training and testing data by using a stocker market API for some ticker
-# Train a classifier (random forest, LSTM) on the data. LSTM will use the past 14 days of data
-# Generate output prediction for green or red on the next day
-
 class StockDataApi:
     url_base = 'https://cloud.iexapis.com/'
     ver = 'stable/'
