@@ -17,14 +17,14 @@ for arg in sys.argv[3:]:
     data = closes[start:end]
     normData = []
     normData = np.divide(data, data[0])
-    normData = normData - normData[0]
+    normData = normData - normData[0] + 1
 
     plt.plot(dates[start:end], normData, label=arg)
     title += arg + ' vs '
 
 title = title[:-4] + ' max normalized closes over time'
 
-plt.hlines(0, 0, len(normData) - 1)
+plt.hlines(1, 0, len(normData) - 1)
 plt.xticks(rotation='vertical')
 plt.title(title)
 plt.xlabel('Date')
