@@ -12,8 +12,10 @@ for arg in sys.argv[3:]:
     dates, changes, closes = dataHandle.getStockData()
 
     start = len(closes) - nDays
+    if start < 0:
+        start = 0
     end = len(closes) - nDaysBeforeEnd 
-
+    print(start, end)
     data = closes[start:end]
     normData = []
     normData = np.divide(data, data[0])
@@ -24,7 +26,7 @@ for arg in sys.argv[3:]:
 
 title = title[:-4] + ' max normalized closes over time'
 
-plt.hlines(0, 0, len(normData) - 1)
+plt.hlines(0, 0, len(normData) - 1, 'k')
 plt.xticks(rotation='vertical')
 plt.title(title)
 plt.xlabel('Date')
