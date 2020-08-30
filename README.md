@@ -23,7 +23,7 @@ Modify the 'range' parameter in StockDataFetcher.py to set how much data we shou
 * '5y'
 * 'max' 
 
-Note that the more data you fetch, the more API messages you use.
+Note that the more data you fetch, the more API messages you use. If the JSON data file exists for a ticker, the program will reuse that data file rather than re-fetch the data.
 
 If you need to switch the API token, modify the token in StockDataApi.py
 
