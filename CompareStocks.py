@@ -15,7 +15,6 @@ for arg in sys.argv[3:]:
     if start < 0:
         start = 0
     end = len(closes) - nDaysBeforeEnd 
-    print(start, end)
     data = closes[start:end]
     normData = []
     normData = np.divide(data, data[0])
